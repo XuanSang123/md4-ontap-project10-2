@@ -1,0 +1,29 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Thong tin khach hang</h1>
+<a href="/">Quay lai danh sach</a>
+<table border="10" cellspacing="10" cellpadding="10">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+            <td th:text="${cus.id}"></td>
+            <td th:text="${cus.name}"></td>
+            <td th:text="${cus.address}"></td>
+            <td th:text="${cus.email}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

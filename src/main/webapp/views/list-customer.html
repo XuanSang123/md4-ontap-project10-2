@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Danh sách khách hàng</h1>
+<a href="/add">+ Them moi khach hang</a>
+<table border="10" cellspacing="10" cellpadding="10">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th colspan="3">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="cus,loop : ${customers}" >
+        <td th:text="${loop.count}"></td>
+        <td th:text="${cus.name}"></td>
+        <td><a th:href="|/detail/${cus.id}|">Details</a></td>
+        <td><a th:href="|/edit/${cus.id}|">Edit</a></td>
+        <td><a th:href="|/delete/${cus.id}|">Delete</a></td>
+    </tr>
+
+
+    </tbody>
+</table>
+</body>
+</html>
